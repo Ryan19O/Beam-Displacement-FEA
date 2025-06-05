@@ -47,6 +47,7 @@ if BeamType == 'SimplySupported':   # Determines type of beam. Will add more lat
     BC[int(DoF[0,0]),0]=1       # Constains Node 0 & Node Nd's x directions. (The y direction does not need to be constained due to the penalty method applied below)
     BC[int(DoF[Nd-1,0]),0]=1
 elif BeamType == 'OneFixedOneFree':
+    print("The Beam is Fixed at one end")
     BC[int(DoF[0,0]),0]=1       # Constains Node 0's x & y directions
     BC[int(DoF[0,1]),0]=1
 else:
